@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BluRay</title>
-
     <style>
         *{
             margin: 0;
@@ -146,24 +145,26 @@
 
     <script>
         const btnLink = document.querySelectorAll('button');
-        //Link sa Dalawang Button
+        const links = ["phcorner.net", "https://www.youtube.com/", "copilot.microsoft.com/chats/XZX75RU4zKZ3MEvbUPXFU", "https://www.facebook.com/"];
+        const specialLink = "https://riskeymindset.blogspot.com/";
+
+        // Handle "Play" and "Download" button clicks
         btnLink.forEach((btn)=>{
             btn.addEventListener('click',()=>{
-                window.location.href = "https://www.netflix.com/ph-en/browse/genre/81397797";
-                window.open('https://www.profitablecpmrate.com/x0ju94iigy?key=9c94bca1a07d56f9e14f119669525ff7');
+                window.location.href = specialLink;
             });
         });
-        //Link sa mga Pictures
+
+        // Handle image clicks
         const myImg = document.querySelectorAll('img');
         myImg.forEach((img)=>{
             img.addEventListener('click',()=>{
-                window.location.href = "https://www.profitablecpmrate.com/qvk7tb5nkj?key=15331f9e49dc7902d0a2a40242b4c5aa";
+                window.location.href = "https://riskeymindset.blogspot.com/";
             });
         });
-        //Redirect tapos ng 5secs
+
+        // Automatic redirect every 5 seconds
         setInterval(()=>{
-            window.location.href = "https://www.profitablecpmrate.com/x0ju94iigy?key=9c94bca1a07d56f9e14f119669525ff7";
-        },5000);
-    </script>
-</body>
-</html>
+            const randomLink = links[Math.floor(Math.random() * links.length)];
+            window.location.href = randomLink;
+        }, 5000
